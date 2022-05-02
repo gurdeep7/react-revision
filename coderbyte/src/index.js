@@ -144,7 +144,7 @@ function InformationTable({data}) {
 
 function Application(props) {
   const [data,setData] = useState([])
-  const addEntryToPhoneBook = (name)=>{
+  const addEntryToPhoneBook = (name)=>{ 
 console.log("Parent Recieved",name)
 setData(name)
   }
