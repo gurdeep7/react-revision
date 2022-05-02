@@ -26,10 +26,20 @@ componentDidMount(){
     console.log("component did mount")
 }
 render(){
+
+    const increaseAge = ()=>{
+        this.state.age = this.state.age + 2
+        console.log(this.state.age, "work")
+        this.render()
+    }
     return(<div>
         {console.log(this.props)}
         hello
+        <div>Age: {this.state.age}</div>
         <div>Count:{this.props.props}</div>
+        <button onClick={()=>{
+            increaseAge()
+        }}>Increase Age</button>
        
     </div>)
 }
