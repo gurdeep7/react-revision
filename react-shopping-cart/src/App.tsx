@@ -10,7 +10,7 @@ import { StyledButton } from "./Item/App.style";
 import Cart from "./Cart/Cart";
 
 const getProducts = async (): Promise<CartItemType[]> =>
-  await (await fetch("https://fakestoreapi.com/products")).json();
+await (await fetch("https://fakestoreapi.com/products")).json();
 
 export type CartItemType = {
   id: number;
